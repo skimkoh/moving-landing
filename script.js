@@ -9,7 +9,7 @@
 
     //do the man running after addclass
     $.when($content.addClass("active")).done(function () {
-      $man.animate({ left: 0 }, 1200);
+      //   $man.animate({ left: 0 }, 1200);
 
       setInterval(function () {
         num = num + 1;
