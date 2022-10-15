@@ -72,3 +72,7 @@ body {
   transform: translateX(0px);
   opacity: 0.95;
 }
+
+.man {
+  background-image: url(1.png)
+}

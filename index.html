@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <div class="running_man">
+    <div class="running_man object" data-value="-2">
         <div class="textarea">
             
           <!-- <span>Continuous<br>img Animation</span>
@@ -15,7 +15,10 @@
           <span>Man</span> -->
         </div>
         <figure class="man"></figure>
+        <!-- <div class="object" data-value="-2" alt="">hehehe</div> -->
+
       </div>
+
       
       
       <!-- for preloading images -->
@@ -36,4 +39,17 @@
       </div>
       <!-- end preloading images -->
       <script src="script.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(e){
+          document.querySelectorAll(".object").forEach(function(move){
+    
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value) / 250;
+            var y = (e.clientY * moving_value) / 250;
+    
+            move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+          });
+        }
+        </script>
 </body>
